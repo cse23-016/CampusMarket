@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Account - Campus Market</title>
+  <link rel="stylesheet" href="account.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script type="module" src="account.js"></script>
+  <script type="module" src="authStatus.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="navbar">
+      <div class="logo">Campus Market</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="browseListings.html">Browse Listings</a>
+        <a href="productUpload.html">Upload Product</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div id="user-info" class="user-info"></div>
+    </div>
+  </header>
+
+  <!-- Account Info Section -->
+  <main class="account-page">
+    <section class="profile-section">
+      <h2>My Profile</h2>
+    <div class="profile-info">
+        <input type="file" id="profilePic" accept="image/*"/>
+        <div id="imagePreview" class="image-preview"></div>
+        
+
+        <div class="form-group">
+           <label for="firstName">First Name</label>
+           <input type="text" id="firstName" required />
+        </div>
+
+        <div class="form-group">
+           <label for="surname">Surname</label>
+           <input type="text" id="surname" required />
+        </div>
+
+        <div class="form-group">
+           <label for="dob">Date of Birth</label>
+           <input type="date" id="dob" required />
+        </div>
+
+        <div class="form-group">
+           <label for="university">University (Botswana)</label>
+            <select id="university" required>
+               <option value="">Select University</option>
+               <option value="BAC">Botswana Accountancy College</option>
+               <option value="UB">University of Botswana</option>
+               <option value="BIUST">Botswana International University of Science and Technology</option>
+               <option value="BAISAGO">Ba Isago University</option>
+               <option value="LIMKOKWING">Limkokwing University</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+           <label for="studentEmail">Student Email</label>
+           <input type="email" id="studentEmail" required />
+        </div>
+
+        <div class="form-group">
+           <label for="password">Password</label>
+           <input type="password" id="password" minlength="8" required />
+        </div>
+
+        <div class="form-group">
+           <input type="checkbox" id="hasBusiness" />
+           <label for="hasBusiness" style="display: inline;">I have a Student Business</label>
+        </div>
+
+        <div id="businessDetails" class="hidden">
+           <div class="form-group">
+               <label for="businessName">Business Name</label>
+               <input type="text" id="businessName" />
+            </div>
+
+            <div class="form-group">
+               <label for="businessDesc">Business Description</label>
+               <textarea id="businessDesc" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+               <label for="businessLocation">Base Location</label>
+               <input type="text" id="businessLocation" />
+            </div>
+
+            <div class="form-group">
+               <label for="businessCategory">Business Category</label>
+               <select id="businessCategory">
+                    <option value="">Select Category</option>
+                   <option value="fashion">Fashion</option>
+                   <option value="tech">Tech</option>
+                   <option value="food">Food & Beverage</option>
+                   <option value="art">Art & Design</option>
+                   <option value="other">Other</option>
+                </select>
+            </div>
+        </div>
+        <button id="update-profile">Update Profile</button>
+    </div>
+    </section>
+
+    <!-- User Listings -->
+    <section class="user-listings">
+      <h2>My Listings</h2>
+      <div id="my-products"></div>
+    </section>
+
+    <!-- Transactions Section -->
+    <section class="transactions">
+      <h2>My Transactions</h2>
+      <div id="transactions-container"></div>
+    </section>
+
+    <!-- Logout -->
+    <button id="logout">Log Out</button>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-logo"><strong>@ Campus Market 2025</strong></div>
+      <div class="footer-links">
+        <div><strong>Explore</strong><br/><a href="browse.html">Browse Listings</a><br/><a href="about.html">About Us</a></div>
+        <div><strong>Help</strong><br/><a href="faq.html">FAQ</a><br/><a href="support.html">Support</a></div>
+        <div><strong>Legal</strong><br/><a href="terms.html">Terms</a><br/><a href="privacy.html">Privacy</a></div>
+      </div>
+    </div>
+    <div class="socials">
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="footerPictures/facebook.png" alt="Facebook" />
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="footerPictures/instagram.png" alt="Instagram" />
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+            <img src="footerPictures/twitter.png" alt="Twitter" />
+        </a>
+        <a href="https://www.youtube.com" target="_blank">
+            <img src="footerPictures/youtube.png" alt="YouTube" />
+        </a>
+    </div>
+  </footer>
+</body>
+</html>

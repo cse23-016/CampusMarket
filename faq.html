@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQs - Campus Market</title>
+  <link rel="stylesheet" href="faq.css" />
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo" href="index.html">Campus Market</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Browse Listings</a>
+        <a href="#">Contact</a>
+        <a href="about.html">About</a>
+      </nav>
+      <a href="logIn.html" class="auth-button">Log In</a>
+    </div>
+  </header>
+
+  <main class="faq-container">
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq">
+      <h3>What is Campus Market?</h3>
+      <p>Campus Market is an online marketplace for students to buy and sell products and services within their campus community.</p>
+    </div>
+
+    <div class="faq">
+      <h3>Who can use Campus Market?</h3>
+      <p>Any student with a valid university or college email address can create an account and start using Campus Market.</p>
+    </div>
+
+    <div class="faq">
+      <h3>How do I list a product?</h3>
+      <p>Once logged in, click the "List Product" button on your dashboard and fill in the product details, price, images, and category.</p>
+    </div>
+
+    <div class="faq">
+      <h3>Is there a cost to use Campus Market?</h3>
+      <p>No, Campus Market is free to use for all students. There are no listing or transaction fees.</p>
+    </div>
+
+    <div class="faq">
+      <h3>How do I report a suspicious listing?</h3>
+      <p>Click the "Report" button on the listing and fill out the form. Our team will review and take appropriate action.</p>
+    </div>
+
+    <div class="faq">
+      <h3>Can I update or remove my listing?</h3>
+      <p>Yes, go to your profile or dashboard to manage your listings. You can update, pause, or delete any product you have listed.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-logo">Campus Market</div>
+      <div class="footer-links">
+        <div><strong>Explore</strong><br/><a href="browse.html">Browse Listings</a><br/><a href="about.html">About Us</a></div>
+        <div><strong>Help</strong><br/><a href="faq.html">FAQ</a><br/><a href="support.html">Support</a></div>
+        <div><strong>Legal</strong><br/><a href="terms.html">Terms</a><br/><a href="privacy.html">Privacy</a></div>
+      </div>
+    </div>
+    <div class="socials">
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="footerPictures/facebook.png" alt="Facebook" />
+      </a>
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="footerPictures/instagram.png" alt="Instagram" />
+      </a>
+      <a href="https://www.twitter.com" target="_blank">
+        <img src="footerPictures/twitter.png" alt="Twitter" />
+      </a>
+      <a href="https://www.youtube.com" target="_blank">
+        <img src="footerPictures/youtube.png" alt="YouTube" />
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq h3').forEach(item => {
+      item.addEventListener('click', () => {
+        item.parentElement.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

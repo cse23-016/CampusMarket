@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Browse Listings</title>
+  <link rel="stylesheet" href="browseListings.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js" type="module"></script>
+  <script src="supabaseClient.js" type="module" defer></script>
+  <script type="module" src="authGuard.js"></script>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo" onclick="window.location.href='index.html'">Campus Market</div>
+      <nav>        
+        <a href="index.html">Home</a>
+        <a href="browseListings.html" class="active">Browse Listings</a>
+        <a href="productUpload.html">Upload Product</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div id="user-info" class="user-info"></div>
+    </div>
+  </header>
+
+  <main>
+    <h1 style="text-align:center; padding-top:1rem;">Browse Listings</h1>
+
+    <div class="filters">
+  <input type="text" id="searchInput" placeholder="Search by name or description..." />
+  <button id="searchButton">Search</button>
+  <select id="categoryFilter">
+    <option value="">All Categories</option>
+    <option value="Clothing">Clothing</option>
+    <option value="Devices">Devices</option>
+    <option value="Food & Beverages">Food & Beverages</option>
+    <option value="Accessories">Accessories</option>
+    <option value="Books & Stationery">Books & Stationery</option>
+    <option value="Services">Services</option>
+    <option value="Other">Other</option>
+  </select>
+  <button id="applyFilterButton">Apply Filter</button>
+</div>
+
+
+    <div id="listings" class="product-listings"></div>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-logo">Campus Market</div>
+      <div class="footer-links">
+        <div><strong>Explore</strong><br/><a href="browse.html">Browse Listings</a><br/><a href="about.html">About Us</a></div>
+        <div><strong>Help</strong><br/><a href="faq.html">FAQ</a><br/><a href="support.html">Support</a></div>
+        <div><strong>Legal</strong><br/><a href="terms.html">Terms</a><br/><a href="privacy.html">Privacy</a></div>
+      </div>
+    </div>
+    <div class="socials">
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="footerPictures/facebook.png" alt="Facebook" />
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="footerPictures/instagram.png" alt="Instagram" />
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+            <img src="footerPictures/twitter.png" alt="Twitter" />
+        </a>
+        <a href="https://www.youtube.com" target="_blank">
+            <img src="footerPictures/youtube.png" alt="YouTube" />
+        </a>
+    </div>
+  </footer>
+  <script src="browseListings.js"></script>
+</body>
+</html>
